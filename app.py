@@ -1,4 +1,4 @@
-from steps_pkg.homepage import show_homepage, give_quote
+from steps_pkg.homepage import show_homepage, give_quote, show_quotes
 from steps_pkg.user import login, register
 
 # show_homepage() # test
@@ -46,8 +46,7 @@ while True:
 
 	elif option == '4':
 		# list quotes fx
-		print("make list quotes fx")
-		show_homepage()
+		show_quotes(quotes)
 
 	elif option == '5':
 		# say goodbye and exit
