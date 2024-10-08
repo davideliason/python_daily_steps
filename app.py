@@ -1,5 +1,5 @@
 from steps_pkg.homepage import show_homepage
-from steps_pkg.user import login
+from steps_pkg.user import login, register
 
 # show_homepage() # test
 database = {"admin":"password123"}

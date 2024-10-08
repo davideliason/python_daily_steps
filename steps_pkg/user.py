@@ -8,3 +8,12 @@ def login(database,username,password):
 	else:
 		print("User not found!")
 		return ''
+
+def register(database,username):
+	if username in database:
+		print("Username is already registered")
+		return username
+	else:
+		print("Username has been registered")
+		return username
+
