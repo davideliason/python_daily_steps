@@ -14,6 +14,6 @@ def register(database,username):
 		print("Username is already registered")
 		return username
 	else:
-		print("Username has been registered")
+		print(f"{username} has been registered")
 		return username
 
