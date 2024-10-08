@@ -1,4 +1,4 @@
-from steps_pkg.homepage import show_homepage
+from steps_pkg.homepage import show_homepage, give_quote
 from steps_pkg.user import login, register
 
 # show_homepage() # test
@@ -38,8 +38,11 @@ while True:
 
 	elif option == '3':
 		# make quote functionality
-		print("make quote fx")
-		show_homepage()
+		if authorized_user =='':
+			print("You are not logged in")
+		else:
+			quote_string = give_quote(authorized_user)
+			quotes.append(quote_string)
 
 	elif option == '4':
 		# list quotes fx
