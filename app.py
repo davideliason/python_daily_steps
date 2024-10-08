@@ -14,3 +14,7 @@ else:
 
 option = input("Enter an option:")
 
+if option == '1':
+        # login functionality
+        username = input('Enter username: ')
+        password = input('Enter password: ')
