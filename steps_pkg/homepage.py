@@ -1,6 +1,6 @@
 # define function that will print the menu of actions for the user
 def show_homepage():
-	print('1. Login 2. Register 3. Enter Quote 4. Show Quotes 5. Logout')
+	print('1. Login 2. Register 3. Enter Quote 4. Show Quotes 5. Logout 6. Log Steps')
 
 def give_quote(username):
 	new_quote = input("Enter new quote: ")

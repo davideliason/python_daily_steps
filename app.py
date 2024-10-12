@@ -53,5 +53,8 @@ while True:
 		print("Goodbye")
 		exit()
 
+	elif option == '6':
+		print("good choice")
+
 
 
