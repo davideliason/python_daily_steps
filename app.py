@@ -5,6 +5,7 @@ from steps_pkg.user import login, register
 database = {"admin":"123"}
 quotes = []
 authorized_user = ""
+steps = []
 
 while True:
 	show_homepage()
@@ -54,7 +55,10 @@ while True:
 		exit()
 
 	elif option == '6':
-		print("good choice")
+		date = input("Enter today's date (MM/DD/YY)")
+		print("ok")
+		steps.append({"date":date})
+		print(steps[0]["date"])
 
 
 
