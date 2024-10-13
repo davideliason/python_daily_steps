@@ -24,6 +24,8 @@ while True:
 	    password = input('Enter password: ')
 
 	    authorized_user = login(database,username,password)
+	    test_dict.append({"name": authorized_user})
+		
 
 
 	elif option == '2':
