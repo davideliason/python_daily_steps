@@ -63,7 +63,8 @@ while True:
 		else:
 			
 			date = input("What is the date (MM-DD-YY)? ")
-			steps.append({authorized_user: {"date": date}})
+			weight = input("What is your weight?")
+			steps.append({"user": authorized_user, "date": date, "weight":weight})
 
 			# save to json
 			# Save to JSON
@@ -76,8 +77,6 @@ while True:
 
 			# Access a specific date
 			
-			user = loaded_data[0]["date"]
-			print(user)
 			print(loaded_data) # print whole data object
 			for person in loaded_data:
 				for key in person:
