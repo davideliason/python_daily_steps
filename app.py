@@ -1,11 +1,12 @@
 from steps_pkg.homepage import show_homepage, give_quote, show_quotes
 from steps_pkg.user import login, register
+import json
 
 # show_homepage() # test
 database = {"admin":"123"}
 quotes = []
 authorized_user = ""
-steps = []
+steps = [{"user": "Alice", "date": "2024-10-10", "steps" :{"weight": 160, "pushups": 20}}]
 
 while True:
 	show_homepage()
@@ -55,10 +56,26 @@ while True:
 		exit()
 
 	elif option == '6':
-		date = input("Enter today's date (MM/DD/YY)")
-		print("ok")
-		steps.append({"date":date})
-		print(steps[0]["date"])
+		user = input("what is your name")
+		date = input("What is the date?")
+		steps.append({"user":user, "date": date})
+
+		# save to json
+		# Save to JSON
+		with open("steps.json", "w") as f:
+			json.dump(steps, f)
+
+		# Retrieve from JSON
+		with open("steps.json", "r") as f:
+			loaded_data = json.load(f)
+
+		# Access a specific date
+		
+		user = loaded_data[0]["date"]
+		print(user)
+		print(loaded_data) # print whole data object
+		for person in loaded_data:
+			print(f"here is {person['user']}")
 
 
 

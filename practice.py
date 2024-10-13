@@ -6,6 +6,11 @@ data = [
     {"user": "Bob", "details": {"age": 25, "birthdate": "1999-05-15"}}
 ]
 
+data2 = []
+user = input("what is your name")
+date = input("What is the date?")
+data.append({"user":user, "date": date})
+
 # Save to JSON
 with open("data.json", "w") as f:
     json.dump(data, f)
@@ -17,3 +22,7 @@ with open("data.json", "r") as f:
 # Access a specific date
 birthdate = loaded_data[1]["details"]["birthdate"]
 print(birthdate) 
+print(date)
+print(loaded_data) # print whole data object
+for person in loaded_data:
+    print(f"here is {person['user']}")
