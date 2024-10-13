@@ -95,12 +95,10 @@ while True:
 
 			for data in loaded_data:
 				for key in data:
-					print(f"this is the key: {key}")
 					if key == 'user' and data[key] == username:
-						print("found key")
+						print(f'Weight: {data["weight"]}')
 						next
-						if key == 'date':
-							print("this is the date")
+						
 					else:
-						print("no data")
+						continue
 						exit
