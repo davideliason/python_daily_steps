@@ -24,7 +24,7 @@ while True:
 	    password = input('Enter password: ')
 
 	    authorized_user = login(database,username,password)
-	    test_dict.append({"name": authorized_user})
+	    steps.append({"name": authorized_user})
 		
 
 
@@ -62,9 +62,8 @@ while True:
 			print("You are not logged in")
 		else:
 			
-			user = input("what is your name")
-			date = input("What is the date?")
-			steps.append({"user":user, "date": date})
+			date = input("What is the date (MM-DD-YY)? ")
+			steps.append({authorized_user: {"date": date}})
 
 			# save to json
 			# Save to JSON
@@ -81,7 +80,7 @@ while True:
 			print(user)
 			print(loaded_data) # print whole data object
 			for person in loaded_data:
-				print(f"here is {person['user']}")
-
+				for key in person:
+					print(f"{key} = {person[key]}")
 
 
