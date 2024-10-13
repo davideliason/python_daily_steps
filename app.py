@@ -25,8 +25,6 @@ while True:
 
 	    authorized_user = login(database,username,password)
 	    steps.append({"name": authorized_user})
-		
-
 
 	elif option == '2':
 		# register functionality
@@ -66,7 +64,6 @@ while True:
 			weight = input("What is your weight?")
 			steps.append({"user": authorized_user, "date": date, "weight":weight})
 
-			# save to json
 			# Save to JSON
 			with open("steps.json", "w") as f:
 				json.dump(steps, f)
@@ -76,8 +73,7 @@ while True:
 				loaded_data = json.load(f)
 
 			# Access a specific date
-			
-			print(loaded_data) # print whole data object
+			# print(loaded_data) # print whole data object for testing purposes
 			for person in loaded_data:
 				for key in person:
 					print(f"{key} = {person[key]}")
