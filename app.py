@@ -82,4 +82,9 @@ while True:
 				for key in person:
 					print(f"{key} = {person[key]}")
 
-
+	elif option == '7':
+		if authorized_user =='':
+			print("You are not logged in")
+		else:
+			search_query = input("What date to look for? ")
+			print(f"ok looking for {search_query}")
