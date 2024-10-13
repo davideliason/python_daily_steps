@@ -58,26 +58,30 @@ while True:
 		exit()
 
 	elif option == '6':
-		user = input("what is your name")
-		date = input("What is the date?")
-		steps.append({"user":user, "date": date})
+		if authorized_user =='':
+			print("You are not logged in")
+		else:
+			
+			user = input("what is your name")
+			date = input("What is the date?")
+			steps.append({"user":user, "date": date})
 
-		# save to json
-		# Save to JSON
-		with open("steps.json", "w") as f:
-			json.dump(steps, f)
+			# save to json
+			# Save to JSON
+			with open("steps.json", "w") as f:
+				json.dump(steps, f)
 
-		# Retrieve from JSON
-		with open("steps.json", "r") as f:
-			loaded_data = json.load(f)
+			# Retrieve from JSON
+			with open("steps.json", "r") as f:
+				loaded_data = json.load(f)
 
-		# Access a specific date
-		
-		user = loaded_data[0]["date"]
-		print(user)
-		print(loaded_data) # print whole data object
-		for person in loaded_data:
-			print(f"here is {person['user']}")
+			# Access a specific date
+			
+			user = loaded_data[0]["date"]
+			print(user)
+			print(loaded_data) # print whole data object
+			for person in loaded_data:
+				print(f"here is {person['user']}")
 
 
 
